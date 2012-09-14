@@ -6,6 +6,8 @@ window.backbonejs = {
   Routers: {},
   init: function() {
     console.log('Hello from Backbone!');
+    this.app = new backbonejs.Router();
+    Backbone.history.start();
   }
 };
 

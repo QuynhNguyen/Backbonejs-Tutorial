@@ -27,6 +27,41 @@
             <p>installed.</p>
             <h3>Enjoy coding! - Yeoman</h3>
         </div>
+        <div id="sidebar"></div>
+        <div id="content">
+            <h2>Welcome to Backbone Cellar</h2>
+            <p>
+            This is a sample application part of of three-part tutorial showing how to build a CRUD application with Backbone.js.
+            </p>
+        </div>
+        <div class="span4">
+            <script type="text/template" id="tpl-wine-list-item">
+                <a href='#wines/<%= id %>'><%= name %></a>
+            </script>
+        </div>
+        <div class="span4">
+            <script type="text/template" id="tpl-wine-details">
+                <label>Id:</label>
+                <input type="text" id="wineId" name="id" value="<%= id %>" disabled />
+                <label>Name:</label>
+                <input type="text" id="name" name="name" value="<%= name %>" required/>
+                <label>Grapes:</label>
+                <input type="text" id="grapes" name="grapes" value="<%= grapes %>"/>
+                <label>Country:</label>
+                <input type="text" id="country" name="country" value="<%= country %>"/>
+                <label>Region:</label>
+                <input type="text" id="region" name="region"  value="<%= region %>"/>
+                <label>Year:</label>
+                <input type="text" id="year" name="year"  value="<%= year %>"/>
+            </script>
+        </div
+        <div class="span4">
+            <script type="text/template" id="tpl-wine-details">
+                <label>Notes:</label>
+                <textarea id="description" name="description"><%= description %></textarea>
+            </script>
+        </div
+
     </div>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -42,6 +77,9 @@
         <script src="scripts/views/application-view.js"></script>
         <script src="scripts/models/application-model.js"></script>
         <script src="scripts/collections/application-collection.js"></script>
+        <script src="scripts/views/WineList-view.js"></script>
+        <script src="scripts/models/Wine-model.js"></script>
+        <script src="scripts/collections/Wine-collection.js"></script>
         <script src="scripts/routes/app-router.js"></script>
         <!-- endbuild -->
 
