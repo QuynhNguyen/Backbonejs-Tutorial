@@ -8,13 +8,20 @@ backbonejs.Router = Backbone.Router.extend({
 		this.wineList = new backbonejs.WineController();
 		this.wineListView = new backbonejs.WineListView({collection:this.wineList});
 		this.wineList.fetch();
+		console.log("start");
+		console.log(this.wineList);
 		$('#sidebar').html(this.wineListView.render().el);
+		console.log(this.wineList);
 	},
 
 	wineDetails: function(id){
 		this.wine = this.wineList.get(id);
-		this.wineView = new WineView({model:this.wine});
-		$('#content').html(this.wineView.render().el);
+		this.wineViewDetails = new backbonejs.WineView({model:this.wine});
+		console.log("third");
+		console.log(this.wineViewDetails);
+		$('#content').html(this.wineViewDetails.render().el);
+		console.log("fourth");
+		console.log(this.wineViewDetails.el);
 	}
 });
 
